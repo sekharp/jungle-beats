@@ -1,4 +1,5 @@
 require_relative 'nodes'
+#Hello
 
 class List
   attr_accessor :head, :nextnode
