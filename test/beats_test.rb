@@ -5,7 +5,11 @@ require '../lib/beats'
 
 class BeatsTest < Minitest::Test
 
+  # turn pseudocode into tests then drill down to unit tests
+
   def test_nothing
   end
+
+  # test it turnsm
 
 end
