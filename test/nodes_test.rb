@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.0'
 require 'minitest/autorun'
 require 'minitest/pride'
-require '../lib/nodes'
+require './lib/nodes'
 
 class NodesTest < Minitest::Test
 
@@ -16,7 +16,9 @@ class NodesTest < Minitest::Test
   end
 
   def test_node_created_with_both_parameters
-    node = Node.new("turing", "yellow")
-    assert_equal "yellow", node.nextnode
+    node = Node.new("turing")
+    node_2 = Node.new("gschool", node)
+    assert_equal "turing", node_2.nextnode.data
   end
+
 end

@@ -1,11 +1,10 @@
 class Node
-  attr_accessor :data, :nextnode  # => nil
+
+  attr_accessor :data, :nextnode
 
   def initialize (data, nextnode = nil)
-    @data = data                         # => "green"
-    @nextnode = nextnode                 # => nil
-  end                                    # => :initialize
+    @data = data
+    @nextnode = nextnode
+  end
 
-end  # => :initialize
-
-Node.new("green")  # => #<Node:0x007fb7ec097170 @data="green", @nextnode=nil>
+end
