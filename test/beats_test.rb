@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.0'
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/beats'
+require './lib/jungle_beats'
 
 class BeatsTest < Minitest::Test
 
