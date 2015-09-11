@@ -5,7 +5,7 @@ require_relative 'list'
 class JungleBeat
   attr_accessor :beats, :list
 
-  def initialize(beats_file, beats_text)
+  def initialize(beats_file, beats_text = "")
     @file_name = beats_file
     @beats = File.read(beats_file)
     @list  = List.new(@head_of_list)
@@ -13,12 +13,6 @@ class JungleBeat
       @list.append(beat)
     end
     @head_of_list = @list.head
-  end
-
-  def list
-    beats_text.split(" ").each do |beat|
-      @list.append(beat)
-    end
   end
 
   def append(beats_text)
@@ -47,10 +41,8 @@ class JungleBeat
     @list.insert(position, beat)
   end
 
-  def includes?(beats_text)
-    beats_text.split(" ").each do |beat|
-      @list.includes?(beat)
-    end
+  def includes?(beat)
+    @list.includes?(beat)
   end
 
   def count
@@ -62,6 +54,7 @@ class JungleBeat
     beats_array = @beats.split(" ")
     sound_count = beats_array.count
     puts "Played #{sound_count} sounds from `#{@file_name}`"
+    return sound_count
   end
 
 end
